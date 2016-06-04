@@ -1,0 +1,6 @@
+               Df Sum Sq Mean Sq F value Pr(>F)  
+testdata$MALE   1    691   691.2   4.691 0.0308 *
+Residuals     518  76326   147.3                 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+54 observations deleted due to missingness

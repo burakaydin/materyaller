@@ -1,0 +1,28 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1464940900828.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "42392D55",
+    "lastKnownWriteTime" : 5292976843906638626,
+    "last_content_update" : 1464940900828,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "dd5cwzd10x",
+        "caption" : "veri2",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=veri2&cache_key=dd5cwzd10x",
+        "displayedObservations" : 600,
+        "environment" : "",
+        "object" : "veri2",
+        "totalObservations" : 600,
+        "variables" : 15
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "R-Intro\n\n========================================================\nauthor: Burak AYDIN \ndate: MAYIS 2016\ntransition: concave\n\n\nR'in popülerliği\n=============================================================\n[Robert A. Muenchen](http://r4stats.com/articles/popularity/)\n\n\nR neler yapabilir?\n=====================================================\n\n * İstatiksel hesaplamalar\n * Grafik\n * veri madenciliği\n * Sunum\n \n ***\n * R markdown\n * R shiny\n * Swirl\n * Simülasyon\n\n\nSunu Hazırla\n========================\n\n* Dosya _01sunuRintro_\n* Dosya _01sunuDeRs2_\n\n\n\nPDF veya Word Yaz\n===========================\n\n* Dosya _02ders2pdf_\n\n\nKitap Yaz\n===========================\n\n* Dosya _03Korelasyon_\n\n\nShiny\n===========================\n\n* Dosya _04basitshiny_\n* Dosya _04AncovaN_\n\nGrafik\n========================\n\n* Dosya _05grafik_\n\nSwirl\n========================\n\n* Dosya _06Swirl_\n\n",
+    "created" : 1464942616138.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3259473022",
+    "id" : "1904D1A7",
+    "lastKnownWriteTime" : 1464896741,
+    "last_content_update" : 1464896741,
+    "path" : "C:/Users/Burak/OneDrive/burak/work/konferans/mugla_ejer/01sunuR.Rpres",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_presentation"
+}

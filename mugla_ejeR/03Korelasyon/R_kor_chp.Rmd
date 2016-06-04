@@ -1,0 +1,45 @@
+---
+title: "Korelasyon"
+author: "Burak AYDIN"
+date: "April 2016"
+output:
+  word_document:
+    fig_caption: yes
+csl: apa.csl
+bibliography: master.bib
+---
+
+
+## Introduction {-}
+
+__Bir nesnenin çekildiği için mi yoksa itildiği için mi düştüğünü sorgulama dedi Galileo. Nesnenin yere ne kadar zamanda düştüğünü iyi bir şekilde tahmin edip edemediğini sorgula. Dahası, bu tür sorulara cevap vermek için nitel ve hilebaz nüansları bulunan bir lisan kullanma, matematiksel eşitlikler kullan.__
+
+Galileo'nun bu tavsiyesi deney ile matematik düşüncenin birleşmesine öncü olmuş ve bir çok biliminsanını doğada gördüğü ilişkileri sayısal olarak ifade etmeye yöneltmiştir. Örneğin soyaçekim konusuyla ilgilenen Galton, genetik miraslarını kolayca manipüle edebildiği bezelyeler üzerinde çalışmış, anne bezelyeler ile yavru bezelyelerin büyüklükleri arasında bir ilişki olup olmadığını araştırmıştır. Bu ilişkiyi sözel ifadeler yerine matematikle açıklamaya çalışan Galton, grafik çizmeyi ve eğim hesaplamayı tercih etmiştir. Galton'un iki değişkenin arasındaki ilişkiyi anlamak için grafik kullanma fikri oldukça başarılı olduğundan, günümüzde korelasyonu anlatan hemen hemen bütün kitaplar bir saçılım grafiği içerir. Saçılım grafiği, değişkenlerden birinin yatay eksene diğerinin ise dikey eksene yerleştirilmesiyle oluşturulur. Örneğin Şekil-4.1'de anne bezelyenin büyüklüğü yatay eksene, bu anneden gelen yavru bezelyenin büyüklüğü ise dikey eksene yerleştirilmiştir. Galton'un kullandığı datayı, R paketi _psych_ [@revelle15] üzerinden kolayca görebilirsiniz. Kod-parçası-4.1'i kullanırsanız bu veriler ile Şekil-4.1'de yer alan grafiği çizebilirsiniz.
+
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+require(psych)                       #data burda
+require(ggplot2) #grafik paketi
+ggplot(peas, aes(x=parent, y=child)) +
+    geom_point(shape=16) +    # shape parametresini değiştirerek noktaların şeklini değiştirebilirsin.
+    geom_smooth(method=lm,   # eğimi göster 
+                se=FALSE)  +    # güven aralığını gösterme 
+   xlab("anne") +    #x aksis ismi
+   ylab("yavru")     # y aksis ismi 
+ 
+
+```
+
+## Pearson Korelasyon Katsayısının Örneklemden Evrene Yorumu
+Eldeki örneklemin sınırsız[^2] sayıda elamanı olan bir evreni temsil edebildiği durumlarda, örneklem üzerinden hesaplanan Pearson korelasyon katsayısı (_r_) evren düzeyindeki korelasyon ($\rho$)hakkında bilgi verebilir. Fakat, evren hakkında yapılacak çıkarımlar çeşitli varsayımlar gerektirir.[@pearson1896].
+
+### Fisher Z Transformasyonu ve Normal Dağılım Kullanarak $\rho$ için Güven Aralığı ve Hipotez Testi 
+
+Pearson korelasyon katsayısının -1 ve +1 ile arasında sınırlanmış olması sebebiyle _r_'nin örnekleme dağılımı normal değildir. Fakat _r_ üzerinde yapılacak bir Z transformasyonu ile güven aralığı hesaplaması  ve hipotez testi prosedürü yürütülebilir. Bu prosedürelerin kusursuz çalışabilmesi için verilerin normallik varsayımını sağlaması ve örneklem sayısının 10 ya da daha büyük olması gerekir [@crockeralgina; @magnusson; @myerswell s 492; @ffm; @judeap; @leerod; @wackerly; @cohenetal; @terrell]. Fisher transformasyonu ve bu transformasyonla elde edilen değerlerin standart hatası şu şekildedir; 
+
+$$z_r = \frac{1}{2}ln \left( \frac{1+r}{1-r} \right)$$
+$$\sigma_r = \frac{1}{\sqrt{n-3}}$$
+
+
+## References {-}
+<!-- placeholder for References in toc --!>

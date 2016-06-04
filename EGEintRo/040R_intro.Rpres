@@ -1,0 +1,72 @@
+R-Intro
+
+========================================================
+author: Burak AYDIN 
+date: Nisan 2016
+transition: concave
+
+
+R nedir?
+========================================================
+Bir programlama dili, bir programlama ortamı (environment).
+
+* [R yükle](https://www.r-project.org/)
+* [R Studio yükle](https://www.rstudio.com/products/rstudio/download/)
+
+
+R'in popülerliği
+=============================================================
+[Robert A. Muenchen](http://r4stats.com/articles/popularity/)
+
+
+R neler yapabilir?
+=====================================================
+
+ * İstatiksel hesaplamalar
+ * Grafik
+ * veri madenciliği
+ * Sunum
+ 
+ ***
+ * R markdown
+ * R shiny
+ * Swirl
+ * Simülasyon
+
+Hesap Makinesi olarak R
+==============================
+
+* Dosya _00HesapmakinesiR_
+* Daha fazlası için _00undergradguidetoR_
+
+
+Fonksiyonlar
+==============================
+
+* Dosya _01fonksiyon_
+* fonksiyonlar pakete, paketler internete...
+* Paket indirme ve kullanma
+
+Veri Okuma ve basit işlemler
+============================
+
+* Dosya _02dataoku_
+
+
+Sunu Hazırla
+========================
+
+* Dosya _Rintro_
+
+
+PDF veya Word Yaz
+===========================
+
+* Dosya _03ders2pdf_
+
+
+Grafik çiz
+========================
+
+[Blog](http://www.aydinburak.net/blog)
+

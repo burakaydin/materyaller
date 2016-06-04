@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "### Basit işlemler\n2+3\n2-3\n2*3\n2/3\n2^3\nsonuc<-2*3\nsonuc\n### Vektör ve matrisler\nvektor<-c(2,3,1)\nvektor\nmatris1<-matrix(c(2,3,1,1,2,2), nrow=2, ncol=3)\nmatris2<-matrix(c(2,3,1,1,2,2), nrow=3, ncol=2)\nmatris1\nmatris2\nt(matris1)\nmatris1[1,]\nmatris1[,1]\nmatris1[1,2]\nmatris1+matris1\nmatris1*matris1\nmatris1%*%matris2\n\n### Verinin okunması\nveri1<-read.table(file=\"electrical_data.txt\", header=TRUE)\n### Veride bulunan başlıklar\nnames(veri1)\n### Sadece ilgili başlığa ait verinin gösterimi\nveri1$Capital_costs\n### Veri ile basit işlemler\ntmp1<-veri1$Capital_costs\ntmp1\ntmp2<-2*tmp1-30\ntmp2\n\n### SPSS veri dosyasının okunması\n#install.packages(\"foreign\")\nlibrary(foreign)\nveri2<-read.spss(\"hsb.sav\", to.data.frame=TRUE)\nnames(veri2)\n### MATH verisi için histogram çizimi\nhist(veri2$MATH)\n### Normal dağılım testi: eğer p değeri 0.5ten küçükse normal dağılım yoktur\nshapiro.test(veri2$MATH) \n\n### Regresyon analizi (http://www.r-tutor.com/elementary-statistics/simple-linear-regression)\n### Help->lm fonksiyonu nasıl kullanılır \nfit<-lm(veri1$Capital_costs ~ veri1$Energy_costs + veri1$Electrical_output, data=veri1)\nsummary(fit)\n### Model parametre-katsayıları (model coefficients)\ncoefficients(fit)\n### Model parametre güven aralıkları (confidence intervals for model parameters)\nconfint(fit, level=0.95)\n### Kestirim değerleri (predicted values)\nfitted(fit)\n### Artık değerleri (residuals)\nresiduals(fit) # residuals\n### anova tablosu (anova table)\nanova(fit) \n### varyans-kovaryans matrisi (covariance matrix for model parameters)\nvcov(fit) \n### regresyon tanıları (regression diagnostics)\ninfluence(fit)  \n### regresyon tanı grafikleri (diagnostic plots)\nlayout(matrix(c(1,2,3,4),2,2))  \nplot(fit)\n\n\n",
+    "created" : 1464937700838.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1631396742",
+    "id" : "29E09196",
+    "lastKnownWriteTime" : 1464937741,
+    "last_content_update" : 1464937741410,
+    "path" : "C:/Users/Burak/Desktop/Rtrials/kod.R",
+    "project_path" : "kod.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

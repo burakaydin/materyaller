@@ -1,0 +1,28 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1464940590372.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "BE9DFEB6",
+    "lastKnownWriteTime" : 0,
+    "last_content_update" : 1464940590372,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "ynjivo2bvb",
+        "caption" : "veri1",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=veri1&cache_key=ynjivo2bvb",
+        "displayedObservations" : 16,
+        "environment" : "",
+        "object" : "veri1",
+        "totalObservations" : 16,
+        "variables" : 6
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

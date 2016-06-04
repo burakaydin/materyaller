@@ -1,0 +1,80 @@
+- Class: meta
+  Course: giRis
+  Lesson: 001
+  Author: your name goes here
+  Type: Standard
+  Organization: your organization's name goes here
+  Version: 2.4.0
+
+- Class: text
+  Output: merhaba, bu materyal, R programlama dilini Türkçe
+bilen kullanicalara tanitmak için deneme amaciyla hazirlanmistir.
+ekranda '...' gördügünde, 'enter' tusuna basarak ilerleyebilirsin
+
+- Class: text
+  Output: R programlama dili, 2014 yilinda, akademik makalelerde en çok kullanilan 3. yazilim olmustur. Kaynak http://r4stats.com/articles/popularity/ .
+Birinciligi ele alacagi gün uzak olmasa gerek
+
+- Class: text
+  Output: 001 kodlu bu dersle R'in en temel islemleri tanitilacak
+
+- Class: cmd_question
+  Output: R'in en basit hali bir hesap makinesidir.
+örnegin (3 + 5) in sonucu ögrenmek için lütfen 3 + 5 yaz ve enter tusuna bas. 
+  CorrectAnswer: 3 + 5
+  AnswerTests: omnitest(correctExpr='3 + 5')
+  Hint: lütfen 3+5 yaz ve enter tusuna bas
+
+- Class: text
+  Output: farkettiysen 3+5 yazdiginda R otomatik olarak [1] 8  sonucunu verdi 
+
+- Class: cmd_question
+  Output: devam edelim.lütfen (3 + 5)*(7 + 3)   yaz ve enter tusuna bas. 
+  CorrectAnswer: (3 + 5)*(7 + 3)
+  AnswerTests: omnitest(correctExpr='(3 + 5)*(7 + 3)')
+  Hint: dersin ilerleyebilmesi için lütfen istenilen esitligi birebir gir. simdi (3 + 5)*(7 + 3) yaz ve enter tusuna bas
+
+- Class: text
+  Output: gördügün gibi, R dogru cevabi, yani 80 i hesapladi 
+
+- Class: text
+  Output: hesap makinesi özelligini, son bir karmasik islemle bitirelim 
+
+- Class: cmd_question
+  Output: 25in karekökünü, 4un 3. kuvveti ile toplayip, sinüs30 a bölelim, lütfen (sqrt(25)+(4^3))/sin(30) yaz ve enter tusuna bas 
+  CorrectAnswer: (sqrt(25)+(4^3))/sin(30)
+  AnswerTests: omnitest(correctExpr='(sqrt(25)+(4^3))/sin(30)')
+  Hint: dersin ilerleyebilmesi için lütfen istenilen esitligi birebir gir.parantezlere dikkat et. simdi (sqrt(25)+(4^3))/sin(30) yaz ve enter tusuna bas
+
+- Class: text
+  Output: R ile herhangi bir hesapmakinesinin yapabilecegi her hesaplamayi yapabilirsin. Fakat R'i bu kadar popüler yapan özelligi bir hesapmakinesi olmasi degil. R bazi yabanci kaynaklarda 'R statistical computing envinroment' olarak isimlendirilir  
+
+- Class: text
+  Output: peki nedir environment? aslinda günlük hayatta en çok kullanilan anlami 'ÇEVRE', fakat bilgisayar dilinde 'ORTAM' olarak kullaniliyor
+
+- Class: text
+  Output: eger R studionun sag üst kösesine bakarsaniz, orda 'enviroment' sekmesini görebilirsiniz. Su an muhtemelen bos. Artik R kullanmaya basladiginiza göre ortami degistirebiliriz
+
+- Class: cmd_question
+  Output: ilk olarak ortama siradan bir sayi ekleyelim, örnegin , k. k sayisi, bir islemin sonucu olarak ortama dahil olmus olsun. örnegin, k <- 3+5 
+  CorrectAnswer: k <- 3+5
+  AnswerTests: any_of_exprs('k <- 3+5', 'k <- 5+3')
+  Hint: simdi k <- 3+5 yaz ve enter tusuna bas
+
+- Class: text
+  Output: buradaki kilit operatör, '<-' k'nin ortama 3+5 olarak girdigini gösteriyor
+
+- Class: cmd_question
+  Output: simdi ortama baska bir sayi daha ekleyelim. örnegin l <- 10  
+  CorrectAnswer: l <- 10
+  AnswerTests: omnitest(correctExpr='l <- 10
+  Hint: simdi l <- 10 yaz ve enter tusuna bas
+
+- Class: text
+  Output: artik ortamda iki tane eleman (element) var.biz bu elamanlarla islemler yapabiliriz
+
+- Class: cmd_question
+  Output:  k çarpi l nin 80 oldugunu gösterebilir misin? 
+  CorrectAnswer: k*l
+  AnswerTests: omnitest(correctExpr='k*l')
+  Hint: k*l yaz ve enter tusuna bas
