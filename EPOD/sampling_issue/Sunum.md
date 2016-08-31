@@ -224,9 +224,9 @@ KMO (32 AFA, min=.77, mean=.87, max=.96, na=7)
 
 Görev dağılımı
 ===========================
-1) Örneklem türleri ve uygun örneklemin sakıncıları
+1) Örneklem türleri ve uygun örneklemin sakıncaları
 
-2) Verinin tamamlanmasi ve açıklanması 
+2) Verinin tamamlanması ve açıklanması 
 
 3) Faktör analizi kritikleri ve model uyumu
 
