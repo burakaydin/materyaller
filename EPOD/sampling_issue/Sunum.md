@@ -32,6 +32,9 @@ Yöntem (2010 ve sonrası)
 * Eğitim ve Bilim 
 * _Kuram ve Uygulamada Eğitim Bilimleri (KUYEB)_
 
+*Not: Öztürk, Eroğlu, Kelecioğlu (2015)
+
+
 Veri
 ========================================================
 * çalışmanın türü (ölçek uyarlama, ölçek geliştirme)
