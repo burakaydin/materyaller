@@ -47,11 +47,11 @@ Konuşmacılar :
 
 - Prof. Dr. Mehmet Küçük  
 
-- Yar. Doç. Dr. Mehmet Kaplan
+- Yrd. Doç. Dr. Mehmet Kaplan
 
-- Yar. Doç. Dr. Asiye Şengül Avşar 
+- Yrd. Doç. Dr. Asiye Şengül Avşar 
 
-- Yar. Doç. Dr. Fazilet Taşdemir 
+- Yrd. Doç. Dr. Fazilet Taşdemir 
 
 - Dr. Burak Aydın
 
@@ -61,7 +61,7 @@ Bu panel flexdashboard paketi kullanarak R ile hazırlanmıştır.
 Row 
 -------------------------------------
 ### **Prof. Dr. Şener Büyüköztürk** {data-height=800}
-**Konuşmacı 1 Saat 11:00-12:00 **
+**Saat 11:00-12:00 **
 <img src="img/buyukoz.png" style="width:35%"></img>
 
 **Tanınırlık**
@@ -79,8 +79,8 @@ Google Akademik veritabanına göre yaklaşık 14000 atıfı olan Şener Hocamı
 Eklenecek
 
 ### **Prof. Dr. Mehmet Küçük** {data-height=800}
-**Konuşmacı 2 Saat 10:15-11:00**
-<img src="img/kucuk.png" style="width:25%"></img>
+**Saat 10:15-11:00**
+<img src="img/kucuk.png" style="width:30%"></img>
 
 **Tanınırlık**
 [`Websitesi`](https://kucukme.wordpress.com/)
@@ -96,8 +96,8 @@ Recep Tayyip Erdoğan Üniversitesi Eğitim Fakültesi Dekanı Mehmet Hocamını
 
 Eklenecek
 
-### **Yar. Doç. Dr. Mehmet Kaplan** {data-height=800}
-**Konuşmacı 3 Saat 13:00-13:45**
+### **Yrd. Doç. Dr. Mehmet Kaplan** {data-height=800}
+**Saat 13:00-13:45**
 <img src="img/kaplan.png" style="width:35%"></img>
 
 **Tanınırlık**
@@ -117,9 +117,9 @@ Bilgisayar ortamında bireye uyarlanmış testler (BOBUT), teknolojinin de geli�
 Row 
 -------------------------------------
 
-### **Yar. Doç. Dr.Fazilet Taşdemir** {data-height=800}
-**Konuşmacı 4 Saat 14:00 - 14:45**
-<img src="img/fazilet.png" style="width:25%"></img>
+### **Yrd. Doç. Dr.Fazilet Taşdemir** {data-height=800}
+**Saat 14:00 - 14:45**
+<img src="img/fazilet.png" style="width:35%"></img>
 
 **Tanınırlık**
 [`Websitesi`](https://egitimetkinlikleri.wordpress.com/bolumlerimizden/egitim-bilimleri-bolumunden/fazilet-tasdemir/)
@@ -127,12 +127,12 @@ Row
 
 **Konuşma Konusu**
 
-Yazılı sınavlar ve puanlanması
+Üst düzey zihinsel becerilerin ortaya çıkarılması amacı ile kullanılan açık uçlu soruların kazanımlara uygun yazımı, soruların dereceli puanlama anahtarı (Rubrik) geliştirerek puanlanması, objektif ölçmeler için ölçme aracından ve ölçmeciden kaynaklanan hataların azaltılması ile ilgili bir paylaşımda bulunulacaktır.
 
 
-### **Yar. Doç. Dr. Asiye Şengül Avşar** {data-height=800}
-**Konuşmacı 5 Saat 15:00-15:45**
-<img src="img/asiye.png" style="width:25%"></img>
+### **Yrd. Doç. Dr. Asiye Şengül Avşar** {data-height=800}
+**Saat 15:00-15:45**
+<img src="img/asiye.png" style="width:35%"></img>
 
 **Tanınırlık**
 [`Websitesi`](http://rteueod.wixsite.com/rteueod)
@@ -144,7 +144,7 @@ Eklenecek
 
 
 ### **Dr. Burak Aydın** {data-height=800}
-**Konuşmacı 6 Saat 16:00- 16:45**
+**Saat 16:00- 16:45**
 <img src="img/aydin.png" style="width:35%"></img>
 
 **Tanınırlık**
