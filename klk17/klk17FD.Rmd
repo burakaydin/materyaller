@@ -140,7 +140,7 @@ Row
 
 **Konuşma Konusu**
 
-Eklenecek
+Eğitimde ve psikolojide bireyler hakkında önemli kararlar vermede kullanılan ölçme araçlarının psikometrik özelliklerinin araştırılması, ölçme ve değerlendirme uygulamalarında çok önemli bir yere sahiptir. Ölçme araçlarının psikometrik özellikleri çeşitli ölçme kuramlarına göre belirlenmektedir. Bu konuşmada ölçme kuramları tanıtılacak ve duyuşsal özelliklerin ölçülmesi üzerinde durulacaktır.
 
 
 ### **Dr. Burak Aydın** {data-height=800}
