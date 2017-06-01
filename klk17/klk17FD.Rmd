@@ -144,7 +144,7 @@ Eklenecek
 <img src="img/aydin.png" style="width:35%"></img>
 
 **Tanınırlık**
-[`Websitesi`](https://aydinburak.net/)
+[`Websitesi`](https://www.aydinburak.net/)
 
 **Konuşma Konusu**
 
