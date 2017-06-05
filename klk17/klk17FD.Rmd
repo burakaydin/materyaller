@@ -67,7 +67,7 @@ Row
 **Tanınırlık**
 [`Websitesi`](http://senerbuyukozturk.com.tr)
 
-Google Akademik veritabanına göre yaklaşık 14000 atıfı olan Şener Hocamızın yayınlarından örnekler
+Google Akademik veritabanına göre yaklaşık 14000 atıfı olan Prof. Dr. Şener Büyüköztürk'ün yayınlarından örnekler;
 
 - Bilimsel Araştırma Yöntemleri (Kitap)
 - Sosyal Bilimler İçin Çok Değişkenli İstatistik (Kitap)
@@ -87,7 +87,7 @@ Okullarda ölçme ve değerlendirmenin temel odağı öğrenci performansıdır.
 **Tanınırlık**
 [`Websitesi`](https://kucukme.wordpress.com/)
 
-Recep Tayyip Erdoğan Üniversitesi Eğitim Fakültesi Dekanı Mehmet Hocamınızın yayınlarından örnekler
+Recep Tayyip Erdoğan Üniversitesi Eğitim Fakültesi Dekanı Prof. Dr. Mehmet Küçük'ün yayınlarından örnekler;
 
 - Eğitimde Ölçme ve Değerlendirme (Kitap)
 - Fatih Projesi Kapsamında Pilot Uygulamanın Yapıldığı Bir Okulda Uygulama Sürecinin ve Çıktılarının Analizi
@@ -154,6 +154,6 @@ Eğitimde ve psikolojide bireyler hakkında önemli kararlar vermede kullanılan
 
 **Konuşma Konusu**
 
-Neden Kısa yanıtlı soruların insansız/robotik puanlanması üzerine geliştirilmiş onlarca yazılım var ve yenileri sürekli geliştiriliyor? Geleceğin ölçme araçları kısa yanıtlı sorulara ne kadar yer verecek? PISA ve ÖSYM için bu tür sorular neden önemli? Akademisyenler ve öğretmenler için bu yeni gelişmeye yönelik araştırma konuları neler olabilir?
+Neden kısa yanıtlı soruların insansız/robotik puanlanması üzerine geliştirilmiş ve geliştirilmekte olan onlarca yazılım var?  Gelecekteki merkezi sınavlarda kısa yanıtlı sorulara ne kadar yer verilecek? PISA ve ÖSYM için bu tür sorular neden önemli? Akademisyenler ve öğretmenler için bu yeni gelişmeye yönelik araştırma konuları neler olabilir?
 
 
