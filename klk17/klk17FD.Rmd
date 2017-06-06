@@ -145,7 +145,7 @@ Row
 
 **Konuşma Konusu**
 
-Üst düzey davranışların ölçmesinin gerektiği durumlarda; kısa yanıtlı soruların etkin bir şekilde kullanılabilmesi, çoktan seçmeli sorularla üst düzey becerileri ölçmede karşılaşılan zorluklar ya da olanaksızlıkları aşmada yardımcı olabilir. Ancak özellikle geniş ölçekli sınavlarda üst düzey becerileri ölçmek için kullanılabilecek kısa yanıtlı soruların önemli bir sınırlılığı bulunmaktadır. Bu sınırlılık; kısa yanıtlı sınavların sorularına verilen yanıtların puanlanmasının uzman kişiler tarafından yapıldığında zaman ve emek bakımından ekonomik olmamasıdır. Söz konusu olan bu sınırlılık; kısa yanıtlı testlerin sorularının yanıt kümesinin sınırlı olması özelliğine dayalı olarak, sorularının puanlanmasında teknolojik gelişmelerin kullanılmasıyla ortadan kaldırılabilir. 
+Kısa yanıtlı soruların etkin bir şekilde kullanılabilmesi, çoktan seçmeli sorularla üst düzey becerileri ölçmede karşılaşılan zorluklar ya da olanaksızlıkları aşmada yardımcı olabilir. Ancak özellikle geniş ölçekli sınavlarda üst düzey becerileri ölçmek için kullanılabilecek kısa yanıtlı soruların önemli bir sınırlılığı bulunmaktadır. Bu sınırlılık; kısa yanıtlı sınavların sorularına verilen yanıtların puanlanmasının uzman kişiler tarafından yapıldığında zaman ve emek bakımından ekonomik olmamasıdır. Söz konusu olan bu sınırlılık; kısa yanıtlı testlerin sorularının yanıt kümesinin sınırlı olması özelliğine dayalı olarak, sorularının puanlanmasında teknolojik gelişmelerin kullanılmasıyla ortadan kaldırılabilir. 
 
 
 ### **Dr. D. Bahar Şahin Sarkın** {data-height=800}
