@@ -68,8 +68,41 @@ KYS Örnekler
 
 * 93’den küçük çift sayılar ile tek sayıların toplamı arasındaki fark kaçtır? “_______________”
 
+KYS Örnekler-ÖSYM 
+==============================
 
-KYS Örnekler-PISA 2015 (Üst düzey)
+![alt text](img/kysorLYS1.png)
+
+***
+![alt text](img/kysorLYS2.png)
+
+ref: http://dokuman.osym.gov.tr/pdfdokuman/2017
+
+
+KYS Örnekler-ÖSYM 
+==============================
+
+![alt text](img/kysorLYS3.png)
+
+***
+![alt text](img/kysorLYS4.png)
+
+ref: http://dokuman.osym.gov.tr/pdfdokuman/2017
+
+
+KYS Örnekler-ÖSYM 
+==============================
+
+![alt text](img/kysorLYS5.png)
+
+***
+![alt text](img/kysorLYS6.png)
+
+ref: http://dokuman.osym.gov.tr/pdfdokuman/2017
+
+
+
+KYS Örnekler-PISA 2015 (MEB telifli)
 ==============================
 
 ![alt text](img/kysorpisa1.png)
@@ -79,7 +112,7 @@ KYS Örnekler-PISA 2015 (Üst düzey)
 
 ref: http://pisa.meb.gov.tr
 
-KYS Örnekler (Üst düzey)
+KYS Örnekler (robotik)
 ==============================
 
 ![alt text](img/kysor1.png)
@@ -91,7 +124,7 @@ KYS Örnekler (Üst düzey)
 ref: https://community.dur.ac.uk/smart.centre1/
 
 
-KYS Örnekler - c rater(Üst düzey)
+KYS Örnekler - c rater(robotik)
 ==============================
 ![alt text](img/kysor3.png)
 
@@ -144,12 +177,9 @@ KYS robotik puanlama (c rater çalışma prensibi)
 
 Kabul edilebilecek cevaplar: 
  
-Hayvanlar otları sindirerek enerji kazanır.
-
-Bir hayvan ot yediğinde enerji alır.
-
-Enerji otlardan hayvanlara transfer olur.
-
+Hayvanlar otları sindirerek enerji kazanır./
+Bir hayvan ot yediğinde enerji alır./
+Enerji otlardan hayvanlara transfer olur./
 Ot yiyen hayvan enerji kazanır. 
 
 ref: Liu ve diğ. 2014
