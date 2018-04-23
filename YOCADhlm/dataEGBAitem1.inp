@@ -1,0 +1,20 @@
+TITLE: gender att
+DATA:        FILE IS dataEGBAyocad.csv;
+
+VARIABLE:    NAMES ARE binitem1 yod age incPCtrs FEM id1 ilID;
+usevariables are binitem1 yod incPCtrs ilID;
+categorical are binitem1;
+cluster is ilID;
+!between sege ;
+within yod incPCtrs ;
+!MISSING ARE ALL (-99); 
+analysis:
+type=twolevel random;
+PROCESSORS = 2;
+estimator=mlr;
+model:
+%within%
+binitem1 on yod incPCtrs;
+!incPCtr;
+!%between%
+!binitem1 on sege;

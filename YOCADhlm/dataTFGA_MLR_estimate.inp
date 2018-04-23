@@ -1,0 +1,22 @@
+TITLE: balanced CAB omml1l2
+DATA: FILE IS C:\Users\burak\Desktop\BASS2016_CAB_mplus.csv;
+
+VARIABLE:    NAMES ARE stid cond pre post tid pregrnt;
+usevariables ARE cond post tid  pregrnt;
+!MISSING ARE ALL (-99);
+cluster is tid;
+within pregrnt;
+between cond ;
+analysis:
+estimator=mlr;
+type=twolevel random;
+PROCESSORS = 2;
+model:
+%within%
+s | post on pregrnt;
+%between%
+post on cond;
+post with s;
+output: Tech1;
+!savedata:
+!results are results.txt;

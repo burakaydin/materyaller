@@ -1,0 +1,218 @@
+Mplus VERSION 8 DEMO
+MUTHEN & MUTHEN
+04/23/2018   3:33 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE: gender att
+  DATA:        FILE IS dataEGBAyocad.csv;
+
+  VARIABLE:    NAMES ARE binitem1 yod age incPCtrs FEM id1 ilID;
+  usevariables are binitem1 yod incPCtrs ilID;
+  categorical are binitem1;
+  cluster is ilID;
+  !between sege ;
+  within yod incPCtrs ;
+  !MISSING ARE ALL (-99);
+  analysis:
+  type=twolevel random;
+  PROCESSORS = 2;
+  estimator=mlr;
+  model:
+  %within%
+  binitem1 on yod incPCtrs;
+  !incPCtr;
+  !%between%
+  !binitem1 on sege;
+
+
+
+*** WARNING in MODEL command
+  A y-variable has been declared on the within level but not referred to on
+  the between level.  Please check that this is what is intended.  If this is not intended,
+  specify the variable as a within variable.  Problem with:  BINITEM1
+   1 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+gender att
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                        5276
+
+Number of dependent variables                                    1
+Number of independent variables                                  2
+Number of continuous latent variables                            0
+
+Observed dependent variables
+
+  Binary and ordered categorical (ordinal)
+   BINITEM1
+
+Observed independent variables
+   YOD         INCPCTRS
+
+Variables with special functions
+
+  Cluster variable      ILID
+
+  Within variables
+   YOD         INCPCTRS
+
+
+Estimator                                                      MLR
+Information matrix                                        OBSERVED
+Optimization Specifications for the Quasi-Newton Algorithm for
+Continuous Outcomes
+  Maximum number of iterations                                 100
+  Convergence criterion                                  0.100D-05
+Optimization Specifications for the EM Algorithm
+  Maximum number of iterations                                 500
+  Convergence criteria
+    Loglikelihood change                                 0.100D-02
+    Relative loglikelihood change                        0.100D-05
+    Derivative                                           0.100D-02
+Optimization Specifications for the M step of the EM Algorithm for
+Categorical Latent variables
+  Number of M step iterations                                    1
+  M step convergence criterion                           0.100D-02
+  Basis for M step termination                           ITERATION
+Optimization Specifications for the M step of the EM Algorithm for
+Censored, Binary or Ordered Categorical (Ordinal), Unordered
+Categorical (Nominal) and Count Outcomes
+  Number of M step iterations                                    1
+  M step convergence criterion                           0.100D-02
+  Basis for M step termination                           ITERATION
+  Maximum value for logit thresholds                            15
+  Minimum value for logit thresholds                           -15
+  Minimum expected cell size for chi-square              0.100D-01
+Optimization algorithm                                         EMA
+Integration Specifications
+  Type                                                    STANDARD
+  Number of integration points                                  15
+  Dimensions of numerical integration                            1
+  Adaptive quadrature                                           ON
+Link                                                         LOGIT
+Cholesky                                                        ON
+
+Input data file(s)
+  dataEGBAyocad.csv
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of clusters                         23
+
+
+
+UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
+
+    BINITEM1
+      Category 1    0.469         2477.000
+      Category 2    0.531         2799.000
+
+
+
+UNIVARIATE SAMPLE STATISTICS
+
+
+     UNIVARIATE HIGHER-ORDER MOMENT DESCRIPTIVE STATISTICS
+
+         Variable/         Mean/     Skewness/   Minimum/ % with                Percentiles
+        Sample Size      Variance    Kurtosis    Maximum  Min/Max      20%/60%    40%/80%    Median
+
+     YOD                   0.298       0.883       0.000   70.19%       0.000      0.000      0.000
+            5276.000       0.209      -1.221       1.000   29.81%       0.000      1.000
+     INCPCTRS              3.643       0.767       0.000    1.72%       1.680      2.600      3.120
+            5276.000       5.796      -0.025       9.300    5.06%       3.750      5.600
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                        4
+
+Loglikelihood
+
+          H0 Value                       -3581.601
+          H0 Scaling Correction Factor      1.2507
+            for MLR
+
+Information Criteria
+
+          Akaike (AIC)                    7171.201
+          Bayesian (BIC)                  7197.485
+          Sample-Size Adjusted BIC        7184.774
+            (n* = (n + 2) / 24)
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Within Level
+
+ BINITEM1   ON
+    YOD                0.242      0.060      4.035      0.000
+    INCPCTRS           0.041      0.016      2.497      0.013
+
+Between Level
+
+ Thresholds
+    BINITEM1$1         0.088      0.085      1.028      0.304
+
+ Variances
+    BINITEM1           0.144      0.063      2.303      0.021
+
+
+LOGISTIC REGRESSION ODDS RATIO RESULTS
+
+Within Level
+
+ BINITEM1   ON
+    YOD                1.274
+    INCPCTRS           1.042
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.418E-02
+       (ratio of smallest to largest eigenvalue)
+
+
+DIAGRAM INFORMATION
+
+  Mplus diagrams are currently not available for multilevel analysis.
+  No diagram output was produced.
+
+
+     Beginning Time:  15:33:35
+        Ending Time:  15:33:36
+       Elapsed Time:  00:00:01
+
+
+Mplus VERSION 8 DEMO has the following limitations:
+  Maximum number of dependent variables: 6
+  Maximum number of independent variables: 2
+  Maximum number of between variables: 2
+  Maximum number of continuous latent variables in time series analysis: 2
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2017 Muthen & Muthen

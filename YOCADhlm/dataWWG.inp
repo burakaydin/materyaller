@@ -1,0 +1,27 @@
+TITLE: WWG book
+DATA:        FILE IS classroomDATAmplus.csv;
+
+VARIABLE:    NAMES ARE mathgain mathkind mathknow housepov classid schoolid childid;
+usevariables ARE mathgain mathkind mathknow housepov classid schoolid;
+cluster is  schoolid classid;
+!MISSING ARE ALL (-99); 
+WITHIN  =  mathkind ;
+BETWEEN =(classid) mathknow (schoolid) housepov;
+ANALYSIS:   TYPE = THREELEVEL RANDOM;
+ Estimator = ML;
+MODEL:
+            %WITHIN%
+
+         mathgain ON mathkind;
+
+            %BETWEEN classid%
+
+         mathgain ON mathknow;
+
+             %BETWEEN schoolid%
+
+         mathgain ON housepov;
+         !mathgain with s2;
+         ![s2@0];
+     OUTPUT:     TECH1 ;
+

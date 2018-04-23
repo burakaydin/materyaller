@@ -1,0 +1,802 @@
+Mplus VERSION 7.4
+MUTHEN & MUTHEN
+04/23/2018  11:01 AM
+
+INPUT INSTRUCTIONS
+
+  TITLE: WWG book
+  DATA:        FILE IS classroomDATAmplus.csv;
+
+  VARIABLE:    NAMES ARE mathgain mathkind mathknow housepov classid schoolid childid;
+  usevariables ARE mathgain mathkind mathknow housepov classid schoolid;
+  cluster is  schoolid classid;
+  !MISSING ARE ALL (-99);
+  WITHIN  =  mathkind ;
+  BETWEEN =(classid) mathknow (schoolid) housepov;
+  ANALYSIS:   TYPE = THREELEVEL RANDOM;
+   Estimator = ML;
+  MODEL:
+              %WITHIN%
+              s1 | mathgain ON mathkind;
+  		
+              %BETWEEN classid%
+              s2 | mathgain ON mathknow;
+              s12 | s1 ON mathknow;
+              s1;
+              mathgain WITH s1;
+
+              %BETWEEN schoolid%
+              mathgain ON housepov;
+              s1 ON housepov;
+              s2 ON housepov;
+              s12 ON housepov;
+              mathgain WITH s1 s2 s12;
+              s1 WITH s2 s12;
+              s2 WITH s12;
+       OUTPUT:     TECH1 ;
+
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+WWG book
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                        1081
+
+Number of dependent variables                                    1
+Number of independent variables                                  3
+Number of continuous latent variables                            3
+
+Observed dependent variables
+
+  Continuous
+   MATHGAIN
+
+Observed independent variables
+   MATHKIND    MATHKNOW    HOUSEPOV
+
+Continuous latent variables
+   S1          S2          S12
+
+Variables with special functions
+
+  Cluster variables     SCHOOLID  CLASSID
+
+  Within variables
+   MATHKIND
+
+  Level 2 between variables
+   MATHKNOW
+
+  Level 3 between variables
+   HOUSEPOV
+
+
+Estimator                                                       ML
+Information matrix                                        OBSERVED
+Maximum number of iterations                                   100
+Convergence criterion                                    0.100D-05
+Maximum number of EM iterations                                500
+Convergence criteria for the EM algorithm
+  Loglikelihood change                                   0.100D-02
+  Relative loglikelihood change                          0.100D-05
+  Derivative                                             0.100D-03
+Minimum variance                                         0.100D-03
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-02
+Optimization algorithm                                         EMA
+
+Input data file(s)
+  classroomDATAmplus.csv
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of CLASSID clusters           285
+     Number of SCHOOLID clusters          105
+
+
+     WARNING: THE MODEL ESTIMATION HAS REACHED A SADDLE POINT OR A POINT WHERE THE
+     OBSERVED AND THE EXPECTED INFORMATION MATRICES DO NOT MATCH.
+     AN ADJUSTMENT TO THE ESTIMATION OF THE INFORMATION MATRIX HAS BEEN MADE.
+     THE CONDITION NUMBER IS      -0.641D-04.
+     THE PROBLEM MAY ALSO BE RESOLVED BY DECREASING THE VALUE OF THE
+     MCONVERGENCE OR LOGCRITERION OPTIONS OR BY CHANGING THE STARTING VALUES
+     OR BY USING THE MLF ESTIMATOR.
+
+     THE STANDARD ERRORS OF THE MODEL PARAMETER ESTIMATES MAY NOT BE
+     TRUSTWORTHY FOR SOME PARAMETERS DUE TO A NON-POSITIVE DEFINITE
+     FIRST-ORDER DERIVATIVE PRODUCT MATRIX.  THIS MAY BE DUE TO THE STARTING
+     VALUES BUT MAY ALSO BE AN INDICATION OF MODEL NONIDENTIFICATION.  THE
+     CONDITION NUMBER IS       0.126D-14.  PROBLEM INVOLVING THE FOLLOWING PARAMETER:
+     Parameter 20, %BETWEEN SCHOOLID%: MATHGAIN WITH S2
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       22
+
+Loglikelihood
+
+          H0 Value                       -5162.470
+
+Information Criteria
+
+          Akaike (AIC)                   10368.939
+          Bayesian (BIC)                 10478.623
+          Sample-Size Adjusted BIC       10408.747
+            (n* = (n + 2) / 24)
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Within Level
+
+ Residual Variances
+    MATHGAIN         664.314     35.599     18.661      0.000
+
+Between CLASSID Level
+
+ MATHGAIN WITH
+    S1               -16.752      7.864     -2.130      0.033
+
+ Residual Variances
+    MATHGAIN        7901.752   3732.108      2.117      0.034
+    S1                 0.036      0.182      0.196      0.844
+
+Between SCHOOLID Level
+
+ S1         ON
+    HOUSEPOV          -0.095      0.228     -0.414      0.679
+
+ S2         ON
+    HOUSEPOV          -0.583    111.656     -0.005      0.996
+
+ S12        ON
+    HOUSEPOV          -0.002      0.239     -0.010      0.992
+
+ MATHGAIN   ON
+    HOUSEPOV          24.748    107.680      0.230      0.818
+
+ MATHGAIN WITH
+    S1                -5.022      5.995     -0.838      0.402
+    S2                -1.112   1849.728     -0.001      1.000
+    S12                0.057      3.994      0.014      0.989
+
+ S1       WITH
+    S2                 0.001      3.866      0.000      1.000
+    S12                0.000      0.302      0.000      1.000
+
+ S2       WITH
+    S12               -0.002      3.920     -0.001      1.000
+
+ Intercepts
+    MATHGAIN         243.067     23.746     10.236      0.000
+    S1                -0.391      0.050     -7.819      0.000
+    S2                 0.343     24.058      0.014      0.989
+    S12                0.005      0.051      0.098      0.922
+
+ Residual Variances
+    MATHGAIN        2604.851   2891.461      0.901      0.368
+    S1                 0.010      0.239      0.042      0.967
+    S2                 1.003   1844.253      0.001      1.000
+    S12                0.000      0.060      0.000      1.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix             -0.641E-04
+       (ratio of smallest to largest eigenvalue)
+
+
+TECHNICAL 1 OUTPUT
+
+
+     PARAMETER SPECIFICATION FOR WITHIN
+
+
+           NU
+              MATHGAIN      MATHKIND      MATHKNOW      HOUSEPOV
+              ________      ________      ________      ________
+ 1                  0             0             0             0
+
+
+           LAMBDA
+              S1%B2         S1%B3         S2            S12           MATHGAIN
+              ________      ________      ________      ________      ________
+ MATHGAIN           0             0             0             0             0
+ MATHKIND           0             0             0             0             0
+ MATHKNOW           0             0             0             0             0
+ HOUSEPOV           0             0             0             0             0
+
+
+           LAMBDA
+              MATHKIND      MATHKNOW      HOUSEPOV
+              ________      ________      ________
+ MATHGAIN           0             0             0
+ MATHKIND           0             0             0
+ MATHKNOW           0             0             0
+ HOUSEPOV           0             0             0
+
+
+           THETA
+              MATHGAIN      MATHKIND      MATHKNOW      HOUSEPOV
+              ________      ________      ________      ________
+ MATHGAIN           0
+ MATHKIND           0             0
+ MATHKNOW           0             0             0
+ HOUSEPOV           0             0             0             0
+
+
+           ALPHA
+              S1%B2         S1%B3         S2            S12           MATHGAIN
+              ________      ________      ________      ________      ________
+ 1                  0             0             0             0             0
+
+
+           ALPHA
+              MATHKIND      MATHKNOW      HOUSEPOV
+              ________      ________      ________
+ 1                  0             0             0
+
+
+           BETA
+              S1%B2         S1%B3         S2            S12           MATHGAIN
+              ________      ________      ________      ________      ________
+ S1%B2              0             0             0             0             0
+ S1%B3              0             0             0             0             0
+ S2                 0             0             0             0             0
+ S12                0             0             0             0             0
+ MATHGAIN           0             0             0             0             0
+ MATHKIND           0             0             0             0             0
+ MATHKNOW           0             0             0             0             0
+ HOUSEPOV           0             0             0             0             0
+
+
+           BETA
+              MATHKIND      MATHKNOW      HOUSEPOV
+              ________      ________      ________
+ S1%B2              0             0             0
+ S1%B3              0             0             0
+ S2                 0             0             0
+ S12                0             0             0
+ MATHGAIN           0             0             0
+ MATHKIND           0             0             0
+ MATHKNOW           0             0             0
+ HOUSEPOV           0             0             0
+
+
+           PSI
+              S1%B2         S1%B3         S2            S12           MATHGAIN
+              ________      ________      ________      ________      ________
+ S1%B2              0
+ S1%B3              0             0
+ S2                 0             0             0
+ S12                0             0             0             0
+ MATHGAIN           0             0             0             0             1
+ MATHKIND           0             0             0             0             0
+ MATHKNOW           0             0             0             0             0
+ HOUSEPOV           0             0             0             0             0
+
+
+           PSI
+              MATHKIND      MATHKNOW      HOUSEPOV
+              ________      ________      ________
+ MATHKIND           0
+ MATHKNOW           0             0
+ HOUSEPOV           0             0             0
+
+
+     PARAMETER SPECIFICATION FOR BETWEEN CLASSID
+
+
+           NU
+              MATHGAIN      MATHKIND      MATHKNOW      HOUSEPOV
+              ________      ________      ________      ________
+ 1                  0             0             0             0
+
+
+           LAMBDA
+              S1%B2         S1%B3         S2            S12           MATHGAIN
+              ________      ________      ________      ________      ________
+ MATHGAIN           0             0             0             0             0
+ MATHKIND           0             0             0             0             0
+ MATHKNOW           0             0             0             0             0
+ HOUSEPOV           0             0             0             0             0
+
+
+           LAMBDA
+              MATHKIND      MATHKNOW      HOUSEPOV
+              ________      ________      ________
+ MATHGAIN           0             0             0
+ MATHKIND           0             0             0
+ MATHKNOW           0             0             0
+ HOUSEPOV           0             0             0
+
+
+           THETA
+              MATHGAIN      MATHKIND      MATHKNOW      HOUSEPOV
+              ________      ________      ________      ________
+ MATHGAIN           0
+ MATHKIND           0             0
+ MATHKNOW           0             0             0
+ HOUSEPOV           0             0             0             0
+
+
+           ALPHA
+              S1%B2         S1%B3         S2            S12           MATHGAIN
+              ________      ________      ________      ________      ________
+ 1                  0             0             0             0             0
+
+
+           ALPHA
+              MATHKIND      MATHKNOW      HOUSEPOV
+              ________      ________      ________
+ 1                  0             0             0
+
+
+           BETA
+              S1%B2         S1%B3         S2            S12           MATHGAIN
+              ________      ________      ________      ________      ________
+ S1%B2              0             0             0             0             0
+ S1%B3              0             0             0             0             0
+ S2                 0             0             0             0             0
+ S12                0             0             0             0             0
+ MATHGAIN           0             0             0             0             0
+ MATHKIND           0             0             0             0             0
+ MATHKNOW           0             0             0             0             0
+ HOUSEPOV           0             0             0             0             0
+
+
+           BETA
+              MATHKIND      MATHKNOW      HOUSEPOV
+              ________      ________      ________
+ S1%B2              0             0             0
+ S1%B3              0             0             0
+ S2                 0             0             0
+ S12                0             0             0
+ MATHGAIN           0             0             0
+ MATHKIND           0             0             0
+ MATHKNOW           0             0             0
+ HOUSEPOV           0             0             0
+
+
+           PSI
+              S1%B2         S1%B3         S2            S12           MATHGAIN
+              ________      ________      ________      ________      ________
+ S1%B2              2
+ S1%B3              0             0
+ S2                 0             0             0
+ S12                0             0             0             0
+ MATHGAIN           3             0             0             0             4
+ MATHKIND           0             0             0             0             0
+ MATHKNOW           0             0             0             0             0
+ HOUSEPOV           0             0             0             0             0
+
+
+           PSI
+              MATHKIND      MATHKNOW      HOUSEPOV
+              ________      ________      ________
+ MATHKIND           0
+ MATHKNOW           0             0
+ HOUSEPOV           0             0             0
+
+
+     PARAMETER SPECIFICATION FOR BETWEEN SCHOOLID
+
+
+           NU
+              MATHGAIN      MATHKIND      MATHKNOW      HOUSEPOV
+              ________      ________      ________      ________
+ 1                  0             0             0             0
+
+
+           LAMBDA
+              S1%B2         S1%B3         S2            S12           MATHGAIN
+              ________      ________      ________      ________      ________
+ MATHGAIN           0             0             0             0             0
+ MATHKIND           0             0             0             0             0
+ MATHKNOW           0             0             0             0             0
+ HOUSEPOV           0             0             0             0             0
+
+
+           LAMBDA
+              MATHKIND      MATHKNOW      HOUSEPOV
+              ________      ________      ________
+ MATHGAIN           0             0             0
+ MATHKIND           0             0             0
+ MATHKNOW           0             0             0
+ HOUSEPOV           0             0             0
+
+
+           THETA
+              MATHGAIN      MATHKIND      MATHKNOW      HOUSEPOV
+              ________      ________      ________      ________
+ MATHGAIN           0
+ MATHKIND           0             0
+ MATHKNOW           0             0             0
+ HOUSEPOV           0             0             0             0
+
+
+           ALPHA
+              S1%B2         S1%B3         S2            S12           MATHGAIN
+              ________      ________      ________      ________      ________
+ 1                  0             5             6             7             8
+
+
+           ALPHA
+              MATHKIND      MATHKNOW      HOUSEPOV
+              ________      ________      ________
+ 1                  0             0             0
+
+
+           BETA
+              S1%B2         S1%B3         S2            S12           MATHGAIN
+              ________      ________      ________      ________      ________
+ S1%B2              0             0             0             0             0
+ S1%B3              0             0             0             0             0
+ S2                 0             0             0             0             0
+ S12                0             0             0             0             0
+ MATHGAIN           0             0             0             0             0
+ MATHKIND           0             0             0             0             0
+ MATHKNOW           0             0             0             0             0
+ HOUSEPOV           0             0             0             0             0
+
+
+           BETA
+              MATHKIND      MATHKNOW      HOUSEPOV
+              ________      ________      ________
+ S1%B2              0             0             0
+ S1%B3              0             0             9
+ S2                 0             0            10
+ S12                0             0            11
+ MATHGAIN           0             0            12
+ MATHKIND           0             0             0
+ MATHKNOW           0             0             0
+ HOUSEPOV           0             0             0
+
+
+           PSI
+              S1%B2         S1%B3         S2            S12           MATHGAIN
+              ________      ________      ________      ________      ________
+ S1%B2              0
+ S1%B3              0            13
+ S2                 0            14            15
+ S12                0            16            17            18
+ MATHGAIN           0            19            20            21            22
+ MATHKIND           0             0             0             0             0
+ MATHKNOW           0             0             0             0             0
+ HOUSEPOV           0             0             0             0             0
+
+
+           PSI
+              MATHKIND      MATHKNOW      HOUSEPOV
+              ________      ________      ________
+ MATHKIND           0
+ MATHKNOW           0             0
+ HOUSEPOV           0             0             0
+
+
+     STARTING VALUES FOR WITHIN
+
+
+           NU
+              MATHGAIN      MATHKIND      MATHKNOW      HOUSEPOV
+              ________      ________      ________      ________
+ 1              0.000         0.000         0.000         0.000
+
+
+           LAMBDA
+              S1%B2         S1%B3         S2            S12           MATHGAIN
+              ________      ________      ________      ________      ________
+ MATHGAIN       0.000         0.000         0.000         0.000         1.000
+ MATHKIND       0.000         0.000         0.000         0.000         0.000
+ MATHKNOW       0.000         0.000         0.000         0.000         0.000
+ HOUSEPOV       0.000         0.000         0.000         0.000         0.000
+
+
+           LAMBDA
+              MATHKIND      MATHKNOW      HOUSEPOV
+              ________      ________      ________
+ MATHGAIN       0.000         0.000         0.000
+ MATHKIND       1.000         0.000         0.000
+ MATHKNOW       0.000         1.000         0.000
+ HOUSEPOV       0.000         0.000         1.000
+
+
+           THETA
+              MATHGAIN      MATHKIND      MATHKNOW      HOUSEPOV
+              ________      ________      ________      ________
+ MATHGAIN       0.000
+ MATHKIND       0.000         0.000
+ MATHKNOW       0.000         0.000         0.000
+ HOUSEPOV       0.000         0.000         0.000         0.000
+
+
+           ALPHA
+              S1%B2         S1%B3         S2            S12           MATHGAIN
+              ________      ________      ________      ________      ________
+ 1              0.000         0.000         0.000         0.000         0.000
+
+
+           ALPHA
+              MATHKIND      MATHKNOW      HOUSEPOV
+              ________      ________      ________
+ 1              0.000         0.000         0.000
+
+
+           BETA
+              S1%B2         S1%B3         S2            S12           MATHGAIN
+              ________      ________      ________      ________      ________
+ S1%B2          0.000         0.000         0.000         0.000         0.000
+ S1%B3          0.000         0.000         0.000         0.000         0.000
+ S2             0.000         0.000         0.000         0.000         0.000
+ S12            0.000         0.000         0.000         0.000         0.000
+ MATHGAIN       0.000         0.000         0.000         0.000         0.000
+ MATHKIND       0.000         0.000         0.000         0.000         0.000
+ MATHKNOW       0.000         0.000         0.000         0.000         0.000
+ HOUSEPOV       0.000         0.000         0.000         0.000         0.000
+
+
+           BETA
+              MATHKIND      MATHKNOW      HOUSEPOV
+              ________      ________      ________
+ S1%B2          0.000         0.000         0.000
+ S1%B3          0.000         0.000         0.000
+ S2             0.000         0.000         0.000
+ S12            0.000         0.000         0.000
+ MATHGAIN       0.000         0.000         0.000
+ MATHKIND       0.000         0.000         0.000
+ MATHKNOW       0.000         0.000         0.000
+ HOUSEPOV       0.000         0.000         0.000
+
+
+           PSI
+              S1%B2         S1%B3         S2            S12           MATHGAIN
+              ________      ________      ________      ________      ________
+ S1%B2          0.000
+ S1%B3          0.000         0.000
+ S2             0.000         0.000         0.000
+ S12            0.000         0.000         0.000         0.000
+ MATHGAIN       0.000         0.000         0.000         0.000       601.647
+ MATHKIND       0.000         0.000         0.000         0.000         0.000
+ MATHKNOW       0.000         0.000         0.000         0.000         0.000
+ HOUSEPOV       0.000         0.000         0.000         0.000         0.000
+
+
+           PSI
+              MATHKIND      MATHKNOW      HOUSEPOV
+              ________      ________      ________
+ MATHKIND     881.009
+ MATHKNOW       0.000         0.000
+ HOUSEPOV       0.000         0.000         0.000
+
+
+     STARTING VALUES FOR BETWEEN CLASSID
+
+
+           NU
+              MATHGAIN      MATHKIND      MATHKNOW      HOUSEPOV
+              ________      ________      ________      ________
+ 1              0.000         0.000         0.000         0.000
+
+
+           LAMBDA
+              S1%B2         S1%B3         S2            S12           MATHGAIN
+              ________      ________      ________      ________      ________
+ MATHGAIN       0.000         0.000         0.000         0.000         1.000
+ MATHKIND       0.000         0.000         0.000         0.000         0.000
+ MATHKNOW       0.000         0.000         0.000         0.000         0.000
+ HOUSEPOV       0.000         0.000         0.000         0.000         0.000
+
+
+           LAMBDA
+              MATHKIND      MATHKNOW      HOUSEPOV
+              ________      ________      ________
+ MATHGAIN       0.000         0.000         0.000
+ MATHKIND       1.000         0.000         0.000
+ MATHKNOW       0.000         1.000         0.000
+ HOUSEPOV       0.000         0.000         1.000
+
+
+           THETA
+              MATHGAIN      MATHKIND      MATHKNOW      HOUSEPOV
+              ________      ________      ________      ________
+ MATHGAIN       0.000
+ MATHKIND       0.000         0.000
+ MATHKNOW       0.000         0.000         0.000
+ HOUSEPOV       0.000         0.000         0.000         0.000
+
+
+           ALPHA
+              S1%B2         S1%B3         S2            S12           MATHGAIN
+              ________      ________      ________      ________      ________
+ 1              0.000         0.000         0.000         0.000         0.000
+
+
+           ALPHA
+              MATHKIND      MATHKNOW      HOUSEPOV
+              ________      ________      ________
+ 1              0.000         0.000         0.000
+
+
+           BETA
+              S1%B2         S1%B3         S2            S12           MATHGAIN
+              ________      ________      ________      ________      ________
+ S1%B2          0.000         0.000         0.000         0.000         0.000
+ S1%B3          0.000         0.000         0.000         0.000         0.000
+ S2             0.000         0.000         0.000         0.000         0.000
+ S12            0.000         0.000         0.000         0.000         0.000
+ MATHGAIN       0.000         0.000         0.000         0.000         0.000
+ MATHKIND       0.000         0.000         0.000         0.000         0.000
+ MATHKNOW       0.000         0.000         0.000         0.000         0.000
+ HOUSEPOV       0.000         0.000         0.000         0.000         0.000
+
+
+           BETA
+              MATHKIND      MATHKNOW      HOUSEPOV
+              ________      ________      ________
+ S1%B2          0.000         0.000         0.000
+ S1%B3          0.000         0.000         0.000
+ S2             0.000         0.000         0.000
+ S12            0.000         0.000         0.000
+ MATHGAIN       0.000         0.000         0.000
+ MATHKIND       0.000         0.000         0.000
+ MATHKNOW       0.000         0.000         0.000
+ HOUSEPOV       0.000         0.000         0.000
+
+
+           PSI
+              S1%B2         S1%B3         S2            S12           MATHGAIN
+              ________      ________      ________      ________      ________
+ S1%B2          1.000
+ S1%B3          0.000         0.000
+ S2             0.000         0.000         0.000
+ S12            0.000         0.000         0.000         0.000
+ MATHGAIN       0.000         0.000         0.000         0.000       601.647
+ MATHKIND       0.000         0.000         0.000         0.000         0.000
+ MATHKNOW       0.000         0.000         0.000         0.000         0.000
+ HOUSEPOV       0.000         0.000         0.000         0.000         0.000
+
+
+           PSI
+              MATHKIND      MATHKNOW      HOUSEPOV
+              ________      ________      ________
+ MATHKIND       0.000
+ MATHKNOW       0.000         0.520
+ HOUSEPOV       0.000         0.000         0.000
+
+
+     STARTING VALUES FOR BETWEEN SCHOOLID
+
+
+           NU
+              MATHGAIN      MATHKIND      MATHKNOW      HOUSEPOV
+              ________      ________      ________      ________
+ 1              0.000         0.000         0.000         0.000
+
+
+           LAMBDA
+              S1%B2         S1%B3         S2            S12           MATHGAIN
+              ________      ________      ________      ________      ________
+ MATHGAIN       0.000         0.000         0.000         0.000         1.000
+ MATHKIND       0.000         0.000         0.000         0.000         0.000
+ MATHKNOW       0.000         0.000         0.000         0.000         0.000
+ HOUSEPOV       0.000         0.000         0.000         0.000         0.000
+
+
+           LAMBDA
+              MATHKIND      MATHKNOW      HOUSEPOV
+              ________      ________      ________
+ MATHGAIN       0.000         0.000         0.000
+ MATHKIND       1.000         0.000         0.000
+ MATHKNOW       0.000         1.000         0.000
+ HOUSEPOV       0.000         0.000         1.000
+
+
+           THETA
+              MATHGAIN      MATHKIND      MATHKNOW      HOUSEPOV
+              ________      ________      ________      ________
+ MATHGAIN       0.000
+ MATHKIND       0.000         0.000
+ MATHKNOW       0.000         0.000         0.000
+ HOUSEPOV       0.000         0.000         0.000         0.000
+
+
+           ALPHA
+              S1%B2         S1%B3         S2            S12           MATHGAIN
+              ________      ________      ________      ________      ________
+ 1              0.000         0.000         0.000         0.000        57.844
+
+
+           ALPHA
+              MATHKIND      MATHKNOW      HOUSEPOV
+              ________      ________      ________
+ 1              0.000         0.000         0.000
+
+
+           BETA
+              S1%B2         S1%B3         S2            S12           MATHGAIN
+              ________      ________      ________      ________      ________
+ S1%B2          0.000         0.000         0.000         0.000         0.000
+ S1%B3          0.000         0.000         0.000         0.000         0.000
+ S2             0.000         0.000         0.000         0.000         0.000
+ S12            0.000         0.000         0.000         0.000         0.000
+ MATHGAIN       0.000         0.000         0.000         0.000         0.000
+ MATHKIND       0.000         0.000         0.000         0.000         0.000
+ MATHKNOW       0.000         0.000         0.000         0.000         0.000
+ HOUSEPOV       0.000         0.000         0.000         0.000         0.000
+
+
+           BETA
+              MATHKIND      MATHKNOW      HOUSEPOV
+              ________      ________      ________
+ S1%B2          0.000         0.000         0.000
+ S1%B3          0.000         0.000         0.000
+ S2             0.000         0.000         0.000
+ S12            0.000         0.000         0.000
+ MATHGAIN       0.000         0.000         0.000
+ MATHKIND       0.000         0.000         0.000
+ MATHKNOW       0.000         0.000         0.000
+ HOUSEPOV       0.000         0.000         0.000
+
+
+           PSI
+              S1%B2         S1%B3         S2            S12           MATHGAIN
+              ________      ________      ________      ________      ________
+ S1%B2          0.000
+ S1%B3          0.000         1.000
+ S2             0.000         0.000         1.000
+ S12            0.000         0.000         0.000         1.000
+ MATHGAIN       0.000         0.000         0.000         0.000       601.647
+ MATHKIND       0.000         0.000         0.000         0.000         0.000
+ MATHKNOW       0.000         0.000         0.000         0.000         0.000
+ HOUSEPOV       0.000         0.000         0.000         0.000         0.000
+
+
+           PSI
+              MATHKIND      MATHKNOW      HOUSEPOV
+              ________      ________      ________
+ MATHKIND       0.000
+ MATHKNOW       0.000         0.000
+ HOUSEPOV       0.000         0.000         0.009
+
+
+DIAGRAM INFORMATION
+
+  Mplus diagrams are currently not available for multilevel analysis.
+  No diagram output was produced.
+
+
+     Beginning Time:  11:01:54
+        Ending Time:  11:02:05
+       Elapsed Time:  00:00:11
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2015 Muthen & Muthen
