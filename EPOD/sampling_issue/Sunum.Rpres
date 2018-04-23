@@ -1,0 +1,232 @@
+EPOD-2016
+
+========================================================
+author: Atılgan, H.,  Aydın, B.,  Gürel, S.,  Kaplan, M.
+date: Eylül 2016
+
+Faktör Analizi Kullanılan Yayınlamış Bilimsel Makalelerde Örneklem Özellikleri
+
+Ana hatlar
+===================================
+* Amaç
+* Yöntem
+* Veri
+* Sonuçlar
+* Görev dağılımı
+
+Amaç
+========================================================
+
+Kline (1994, s. 72) Faktör analiziyle elde edilen faktörler kullanılan örneklemden etkilenir. 
+
+* Türkiye’de yayınlanan ve faktör analizi kullanılan bilimsel makalelerin örneklemleri özellikleri nelerdir?  
+
+* Uygun örnekleme (convenience sampling) yönteminin kullanım sıklığı nedir?
+
+* Kayıp  veri sorunu nasıl ele alınıyor?
+
+Yöntem (2010 ve sonrası)
+========================================================
+* Eurasian Journal of Educational Research (EJER) 
+* Hacettepe Üniversitesi Eğitim Fakültesi 
+* Eğitim ve Bilim 
+* _Kuram ve Uygulamada Eğitim Bilimleri (KUYEB)_
+
+*Not: Öztürk, Eroğlu, Kelecioğlu (2015)
+
+
+Veri
+========================================================
+* çalışmanın türü (ölçek uyarlama, ölçek geliştirme)
+* faktör analizine taabi tutulan madde sayısı
+* faktör analizi çerçevesi (doğrulayıcı ya da açımlayıcı)
+* örnekleme yöntemi 
+* örneklem büyüklüğü
+* veri türü (kategorik, dereceleme)
+
+***
+
+* kullanılan kestirici 
+* kullanılan yazılım
+* kayıp veri yüzdesi
+* popülasyon tanımın mevcut olup olmaması 
+* alt faktör sayısı
+* karşılaştırılan model sayısı.
+
+
+Sonuçlar
+==============================
+
+Toplam 40 makale
+
+```{r, echo=F, message=F, out.width = '450px', dpi=300}
+library(reshape2)
+require(ggplot2)
+data=read.csv("data_sheet2.csv")
+EJER=table(data[,2])[2]
+Hacettepe=table(data[,2])[3]
+EB=table(data[,2])[4]
+df <- data.frame(EB,EJER, Hacettepe)
+df=melt(df)
+colnames(df)=c("Dergi","value")
+g <- ggplot(df, aes(x=Dergi, y=value, fill=Dergi, label=value))+ xlab(" ") + ylab(" ")
+g <- g + geom_bar(stat="identity") + geom_text(aes(y = value + 0.5,label = value)) + coord_polar()
+g
+
+```
+
+***
+
+25 Uyarlama,15 Geliştirme 
+
+```{r, echo=F, message=F, out.width = '450px', dpi=200}
+G=table(data[,3])[2]
+U=table(data[,3])[3]
+df <- data.frame(G,U)
+df=melt(df)
+colnames(df)=c("Tip","value")
+g <- ggplot(df, aes(x=Tip, y=value, fill=Tip, label=value))+ xlab(" ") + ylab(" ")
+g <- g + geom_bar(stat="identity") + geom_text(aes(y = value + 0.5,label = value)) + coord_polar()
+g
+
+```
+
+
+
+==============================
+
+Ortalama $n_i$ =8.62
+
+```{r, echo=F, message=F,out.width = '500px', dpi=200}
+#head(data)
+data$altfak2=as.factor(ifelse(data$altfak==6 | data$altfak==8,5,data$altfak))
+data$nbyf=data$madde/data$altfak
+data1=na.omit(data[,c("altfak2","nbyf")])
+g= ggplot(data1, aes(x=nbyf)) + geom_histogram(colour="black", fill="white") + 
+ facet_grid(altfak2 ~ .)+xlab("madde / faktor")+ylab("frekans")+
+  ggtitle("MADDE/FAKTOR ve FAKTOR SAYISI") +   scale_x_continuous(breaks = round(seq(1, 20, by = 1)))
+g
+
+```
+
+
+
+Analiz
+=====================
+
+32 AFA 26 DFA
+
+```{r, echo=F, message=F, out.width = '350px', dpi=200}
+AFA=table(data[,5])[2]
+DFA=table(data[,5])[3]
+df <- data.frame(AFA,DFA)
+df=melt(df)
+colnames(df)=c("Tip","value")
+g <- ggplot(df, aes(x=Tip, y=value, fill=Tip, label=value))+ xlab(" ") + ylab(" ")
+g <- g + geom_bar(stat="identity") + geom_text(aes(y = value + 0.5,label = value)) + coord_polar()
+g
+
+```
+
+
+***
+
+YAZILIM
+
+```{r, echo=F, message=F, out.width = '350px', dpi=200}
+AMOS=table(data[,11])[1]
+Lisrel=table(data[,11])[3]
+SPSS=table(data[,11])[4]
+NO=table(data[,11])[2]
+df <- data.frame(AMOS,Lisrel, SPSS, NO)
+df=melt(df)
+colnames(df)=c("Tip","value")
+g <- ggplot(df, aes(x=Tip, y=value, fill=Tip, label=value))+ xlab(" ") + ylab(" ")
+g <- g + geom_bar(stat="identity") + geom_text(aes(y = value + 0.5,label = value)) + coord_polar()
+g
+
+```
+
+
+
+Örneklem
+========================================================
+
+```{r, echo=F, message=F, out.width = '350px', dpi=200}
+#names(data)
+Amacli=table(data[,6])[1]
+No=table(data[,6])[2]
+Random=table(data[,6])[3]
+Uygun=table(data[,6])[4]
+df <- data.frame(Uygun,Random, No, Amacli)
+df=melt(df)
+colnames(df)=c("Tip","value")
+bp<- ggplot(df, aes(x="", y=value, fill=Tip))+
+geom_bar(width = 1, stat = "identity")
+pie <- bp + coord_polar("y", start=0)
+library(scales)
+blank_theme <- theme_minimal()+
+  theme(
+  axis.title.x = element_blank(),
+  axis.title.y = element_blank(),
+  panel.border = element_blank(),
+  panel.grid=element_blank(),
+  axis.ticks = element_blank(),
+  plot.title=element_text(size=14, face="bold")
+  )
+pie + scale_fill_brewer("Blues") + blank_theme +
+  theme(axis.text.x=element_blank())+
+  geom_text(aes(y = value/3 + c(0, cumsum(value)[-length(value)]), 
+                label = percent(value/sum(table(data[,6])))), size=5)
+
+```
+
+(The Journal of Vocational Behavior, 2014, Ulakbim, 48)
+
+***
+
+```{r, echo=F, message=F, out.width = '350px', dpi=200}
+#names(data)
+ggplot(data, aes(x=n)) +
+    geom_histogram( colour="black", fill="white") + ylab("frekans")+
+    scale_x_continuous(breaks = round(seq(100, 1200, by = 100)))+
+    geom_vline(aes(xintercept=mean(n, na.rm=T)),   # Ignore NA values for mean
+               color="red", linetype="dashed", size=1)
+
+```
+
+Ortalama 394
+
+
+
+Belirsizlikler 
+========================================================
+
+* Kayıp veri bilgisi (%80 yok)
+* Tahminleyici (%66 yok)
+* Popülasyon (%39 yok)
+* Kıyaslama (%32 yok)
+
+
+
+Model Uyum (26 DFA)
+=============================
+```{r, echo=F}
+library(knitr)
+datatab=data.frame(round(do.call(cbind, lapply(data[data$analiz=="B",17:25], summary)),2))
+kable(datatab,format = "html")
+```
+
+KMO (32 AFA, min=.77, mean=.87, max=.96, na=7) 
+
+Görev dağılımı
+===========================
+1) Örneklem türleri ve uygun örneklemin sakıncaları
+
+2) Verinin tamamlanması ve açıklanması 
+
+3) Faktör analizi kritikleri ve model uyumu
+
+4) Tahminleyiciler ve kayıp veri teknikleri 
+
+TEŞEKKÜRLER 
