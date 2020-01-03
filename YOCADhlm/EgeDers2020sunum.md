@@ -6,19 +6,33 @@ autosize: true
 
 
 
-Nicel Veriler
+İçerik
 ========================================================
 
-<div>
-<img src="img/nicel.jpg" width=1000 height=900>
-</div>
+1. __Nicel veriler neden önemli?__
 
-***
+2. Korelasyon -> Regresyon -> Çok düzeyli modeller (ÇDM)
+
+3. Çok düzeyli modellerin gerekliliği - Örnekler
+
+4. Dikkat edilmesi gereken noktalar
+
+
+
+
+
+
+
+Nicel Veriler                                   
+========================================================
+
 <div>
 <img src="img/pisa2018.png" width=600 height=400>
 </div>
 
 - Nicel veriler neden bu kadar hayatımızda ve önemli?
+
+
 
 Galileo ve Galton
 ========================================================
@@ -43,9 +57,9 @@ Galileo ve Galton
 Korelasyon 
 ========================================================
 
-- $$\rho(x,y)$$
+$$\rho(x,y)$$
 
-- $$cor(x,y)=\frac{\frac{\sum_{i=1}^n ((x_i - \hat{x})((y_i - \hat{y}))}{n-1}}{s_x s_y}$$
+$$cor(x,y)=\frac{\frac{\sum_{i=1}^n ((x_i - \hat{x})((y_i - \hat{y}))}{n-1}}{s_x s_y}$$
 
 - Peki sadece iki değişkenin arasındaki doğrusal ilişkiyi anlamak yeterli mi?
 
@@ -54,7 +68,7 @@ Regresyon
 ========================================================
 
 
-- $$Y_i=\beta_0 + \beta_1 X_{1i} + \beta_2 X_{2i} + e_i$$
+$$Y_i=\beta_0 + \beta_1 X_{1i} + \beta_2 X_{2i} + ... + e_i$$
 
 - Ne kadar yaygın? 
 
@@ -69,6 +83,18 @@ Regresyon örnekleri
 - İlkokulda sınıf atlamanın akademik başarıda etkisi var mı? [1]
 - İyi argüman geliştirmeyi etkileyen faktörler nelerdir? 
 
+
+
+İçerik
+========================================================
+
+1. Nicel veriler neden önemli?
+
+2. __Korelasyon -> Regresyon -> Çok düzeyli modeller (ÇDM)__
+
+3. Çok düzeyli modellerin gerekliliği - Örnekler
+
+4. Dikkat edilmesi gereken noktalar
 
 
 Regresyonda önemli noktalar 
@@ -86,11 +112,21 @@ BOHT durumları
 
 1. Verilerin kümeli yapılardan gelmesi. Peki eğitim alanında hangi kümelerden bahsedebiliriz?
 
-2. Boylamsal veriler. Peki boylamsal veriler neden önemlidir?
+2. Boylamsal veriler. 
 
 ***
 
 ![cokduzey](img/threelevel.png)
+
+
+
+İçerik
+========================================================
+
+1. Nicel veriler neden önemli?
+2. Korelasyon -> Regresyon -> Çok düzeyli modeller (ÇDM)
+3. __Çok düzeyli modellerin gerekliliği - Örnekler__
+4. Dikkat edilmesi gereken noktalar
 
 
 Çok düzeyli modellerin gerekliliği
@@ -101,20 +137,18 @@ BOHT durumları
 3. Varyansın veya modelin düzeyler arası nasıl farklılık  gösterdiğini anlamak.
 
 
-1. BOHT durumunda geçerli sonuçlara ulaşmak - örnek 
+1. BOHT durumunda geçerli sonuçlara ulaşmak - Örnek 
 ========================================================
 
-- Kümelerden oluşan bir örneklemde müdahele etkisi araştırmak.
-
- ![ornek1](img/Ornek1.png)
-
-- Peki doğru tahmin yapmak için çok düzeyli modeller tek alterntif mi?
+- Örnek: Öğrencilerin davranış bozukluklarını azaltmak üzere hazırlanmış bir program (müdahele) etkili mi? 
+- BOHT durumu: Öğrencilerin okullarda kümelenmiş olması.
+- Çok düzeyli model yerine geleneksel regresyon kullanırsak sonucu ne olabilir?
 
 
 2. Bağlamsal etkileri görmek
 ========================================================
 
- ![kontext](img/contextual.png)
+- Bağlamsal etki nedir? Bir kümede ortalamaya göre nerde yer aldığımız önemli midir? 
 
 - Örnek: Büyük balık küçük göl etkisi [2]
 
@@ -126,6 +160,14 @@ BOHT durumları
 
 - Farklı düzeylerde farklı yapısal modeller
 
+
+İçerik
+========================================================
+
+1. Nicel veriler neden önemli?
+2. Korelasyon -> Regresyon -> Çok düzeyli modeller (ÇDM)
+3. Çok düzeyli modellerin gerekliliği - Örnekler
+4. __Dikkat edilmesi gereken noktalar__
 
 
 Nelere dikkat edilmeli?
@@ -139,7 +181,7 @@ Nelere dikkat edilmeli?
 
 - Örneklem büyüklüğü yeterli mi? (İkinci düzey örneklemi azsa ne yapılabilir?)
 
-- Ağırlıklandırma ?
+- Ağırlıklandırma?
 
 - Sıradışı/etkili  gözlemler?
 
@@ -150,20 +192,12 @@ Nelere dikkat edilmeli?
 Referanslar
 ========================================================
 
-<small>
-
 - [1] Kretschmann, J., Vock, M., & Lüdtke, O. (2014). Acceleration in elementary school: Using propensity score matching to estimate the effects on academic achievement. Journal of educational psychology, 106(4), 1080.
 
 - [2] Marsh, H. W., Trautwein, U., Lüdtke, O., Baumert, J., & Köller, O. (2007). The big-fish-little-pond effect: Persistent negative effects of selective high schools on self-concept after graduation. American Educational Research Journal, 44(3), 631-669.
 
-***
+- Snijders ve Bosker (2012), Finch, Bolin ve Kelley (2014), Pinheiro ve Bates (2000), West, Welch ve Galecki (2015)
 
-- Snijders ve Bosker (2012)
-- Finch, Bolin ve Kelley (2014)
-- Pinheiro ve Bates (2000)
-- West, Welch ve Galecki (2015)
-
-</small>
 
 Soru-cevap 
 ========================================================
