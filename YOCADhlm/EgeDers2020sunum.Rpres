@@ -56,7 +56,7 @@ Regresyon
 
 - $$Y_i=\beta_0 + \beta_1 X_{1i} + \beta_2 X_{2i} + e_i$$
 
-- Ne kadar yaygın? LM, GLM, MLM, GMLM,SEM, ...
+- Ne kadar yaygın? 
 
 - Sosyal bilimlerde ve eğitim araştırmalarında en çok atıf alan makaleler/araştırmacılar?
 
@@ -108,7 +108,7 @@ BOHT durumları
 
  ![ornek1](img/Ornek1.png)
 
-- Peki doğru tahmin yapmak için çok düzeyli modeller şart mı?
+- Peki doğru tahmin yapmak için çok düzeyli modeller tek alterntif mi?
 
 
 2. Bağlamsal etkileri görmek
