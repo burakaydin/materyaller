@@ -26,11 +26,13 @@ autosize: true
 Nicel Veriler                                   
 ========================================================
 
-<div>
-<img src="img/pisa2018.png" width=600 height=400>
-</div>
+- Nicel veri: sayısal değerle ifade edilen veriler.
 
-- Nicel veriler neden bu kadar hayatımızda ve önemli?
+- Nicel veriler neden bu kadar hayatımızda ve önemli? Örneğin PISA?
+
+<div>
+<img src="img/pisa2018.png" width=900 height=600>
+</div>
 
 
 
