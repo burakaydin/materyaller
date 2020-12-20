@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="DOÇ. DR. BURAK AYDIN" />
+  <title>FAKTÖR ANALİZLERİNDE TEKRARLANABİLİRLİK</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="FAT2020sunum_files/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+
+<link rel="stylesheet" href="FAT2020sunum_files/reveal.js-3.3.0.1/css/theme/moon.css" id="theme">
+
+<style type="text/css">
+.reveal section img {
+  background: rgba(255, 255, 255, 0.85);
+}
+</style>
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title">FAKTÖR ANALİZLERİNDE TEKRARLANABİLİRLİK</h1>
+    <h2 class="author">DOÇ. DR. BURAK AYDIN</h2>
+</section>
+
+<section id="sunumun-temel-referanslari" class="slide level2">
+<h2>SUNUMUN TEMEL REFERANSLARI</h2>
+<ul>
+<li><a href="https://dergipark.org.tr/en/pub/epod/issue/43953">Aydın,Kaplan,Atılgan ve Gürel (2019)</a></li>
+<li><a href="https://science.sciencemag.org/content/349/6251/aac4716">Open Science Colloboration (2015)</a></li>
+<li><a href="https://www.frontiersin.org/articles/10.3389/fpsyg.2017.00862/full">Stevens (2017)</a></li>
+</ul>
+<aside class="notes">
+<ul>
+<li>f fullscreen</li>
+<li>o or ESC for overview mode</li>
+<li>alt and click an element to zoom</li>
+<li>s for speaker view</li>
+<li>B or . to pause the presentation</li>
+</ul>
+</aside>
+</section>
+<section id="sunum-içeriği" class="slide level2">
+<h2>SUNUM İÇERİĞİ</h2>
+<ul>
+<li>Tekrarlanabilirlik nedir?</li>
+<li>Faktör analizlerinde tekrarlanabilirlik</li>
+<li>Tekrarlanabilirlik için öneriler</li>
+<li>Soru-cevap</li>
+</ul>
+</section>
+<section id="tekrarlanabilirlik-nedir-stevens2018" class="slide level2">
+<h2>TEKRARLANABİLİRLİK NEDİR? (Stevens,2018)</h2>
+<ul>
+<li><p>Reproducibility, Replicability, Repeatability</p>
+<ul>
+<li>Replicability - Farklı ekip, aynı tasarı, ayrı çalışma -&gt; İlgililerin sonuçları/çıkarımları tekrarlama çabası?</li>
+<li>Reproducibility - Farklı analist aynı çalışma -&gt; İlgililerin bulguları/analizleri tekrarlama çabası?</li>
+</ul></li>
+<li><p>Bu iki terim arasındaki çizgiyi belirlemek adına reproducibility -&gt; computational reproducibility</p></li>
+</ul>
+</section>
+<section id="osc-2015-ne-raporladı" class="slide level2">
+<h2>OSC 2015 ne raporladı?</h2>
+<ul>
+<li>100 korelasyonel ve deneysel çalışmanın sonuçları sahada tekrarlanmaya çalışıldı.</li>
+<li>Yaklaşık %60’ı tekrarlanamadı.</li>
+<li><img src="OSC2015.png" width="700"></li>
+</ul>
+</section>
+<section id="sizce-tekrarlanabilirlik-krizi-var-mi" class="slide level2">
+<h2>SİZCE TEKRARLANABİLİRLİK KRİZİ VAR MI?</h2>
+<ul>
+<li><p>Üç seçenekten birini kullanabilirsiniz</p>
+<ul>
+<li><p><a href="https://www.menti.com/wdwgzd68a1">Link</a></p></li>
+<li><p>www.menti.com adresinde 11 95 50 5 kodu</p></li>
+<li><p><img src="mentiqr.png" width="300"></p></li>
+</ul></li>
+<li><p><a href="https://www.mentimeter.com/s/11e45937799118a1e4e8147fc1b8edf6/5ae788a2bf23">Sonuçlar</a></p></li>
+</ul>
+</section>
+<section id="nature-tekrarlanabilirlik-anketi" class="slide level2">
+<h2>NATURE TEKRARLANABİLİRLİK ANKETİ</h2>
+<p><img src="Nature2016.png" width="800"></p>
+</section>
+<section id="faktör-analizi" class="slide level2">
+<h2>FAKTÖR ANALİZİ</h2>
+<ul>
+<li>Ölçek geliştirme ve uyarlama</li>
+<li>Nicel araştırmalarda geçerlik ve güvenirlik kanıtı</li>
+<li><img src="FAkenny.png" width="700"></li>
+</ul>
+<aside class="notes">
+<p>Ölçek kullanımı ne kadar yaygın? %50 Göktaş, Karadağ, Sözbilir FA yapı geçerliği için yeterli mi?</p>
+</aside>
+</section>
+<section id="aydin-kaplan-atilgan-gürel-2019" class="slide level2">
+<h2>AYDIN, KAPLAN, ATILGAN &amp; GÜREL (2019)</h2>
+<ul>
+<li>Türkiye adresli dört saygın dergi</li>
+<li>2010-2017 arası faktör analizi kullanan yayınlar</li>
+<li>275 makale 448 analiz</li>
+<li>Faktör analizi sonuçlarını tekrarlayabilir miyiz?</li>
+</ul>
+</section>
+<section id="yanit-aranan-sorular" class="slide level2">
+<h2>YANIT ARANAN SORULAR</h2>
+<ul>
+<li>S1. Çalışmalarda evren tanımı ve örneklem seçimi</li>
+<li>S2. Örneklem büyüklüğü, soru ve faktör sayıları nelerdir?</li>
+<li>S3. Kayıp veriler nasıl ele alınmıştır?</li>
+<li>S4. Hangi yazılımlar kullanılmıştır?</li>
+<li>S5. Kullanılan veri türü (kategorik/sürekli) ve tahminleyiciler (estimator) nelerdir?</li>
+<li>S6. Rapor edilen uyum bilgileri nelerdir?</li>
+</ul>
+</section>
+<section id="s1-evren-ve-örneklem" class="slide level2">
+<h2>S1-EVREN VE ÖRNEKLEM</h2>
+<ul>
+<li>Net bir evren tanımı %78 mevcut değil.</li>
+<li>Uygun örnekleme veya belirlenemeyen örnekleme oranı %51.</li>
+<li>Peki ne olmalı? Simon (1979) ve Gaskin, Orellana, Bowe ve Lambert (2017)</li>
+</ul>
+<aside class="notes">
+<p>Simon 1 üniversite 188, ulusal çapta 188. Gaskin sağlık puanları çarpık ve normal Aynı örneklemde AFA ve DFA Erkuş, 2016; Van Prooijen &amp; Van Der Kloot, 2001</p>
+</aside>
+</section>
+<section id="s2-örneklem-büyüklüğü" class="slide level2">
+<h2>S2-ÖRNEKLEM BÜYÜKLÜĞÜ</h2>
+<ul>
+<li><p>Ortanca örneklem büyüklüğü 380-460</p></li>
+<li><p>Ortanca faktör başına madde sayısı 7</p></li>
+<li><p>Ortanca madde başına örneklem 15</p></li>
+<li><p>Peki ne olmalı? Wolf, Harrington, Clark, &amp; Miller, 2013</p></li>
+</ul>
+</section>
+<section id="s3-kayip-veri" class="slide level2">
+<h2>S3-KAYIP VERİ</h2>
+<ul>
+<li>%76 kayıp veri bilgisi mevcut değil.</li>
+<li>Bahsedenlerin %94’ü sıralı silme kullandığını raporlamış.</li>
+<li>Peki ne olmalı?</li>
+</ul>
+<aside class="notes">
+<p>Boş bırakmamaya zorlamak? Xiao, Liu &amp; Li 2017</p>
+</aside>
+</section>
+<section id="s4-yazilim-bilgisi" class="slide level2">
+<h2>S4-YAZILIM BİLGİSİ</h2>
+<ul>
+<li>%34 yazılım bilgisi mevcut değil.</li>
+<li>Tamamı ticari yazılımlar, SPSS, AMOS ve Lisrel baskın</li>
+<li>Yazılım bilgisi neden önemli?</li>
+</ul>
+</section>
+<section id="s5-veri-türü-ve-tahminleyiciler" class="slide level2">
+<h2>S5-VERİ TÜRÜ VE TAHMİNLEYİCİLER</h2>
+<ul>
+<li>%13 veri türü mevcut değil</li>
+<li>Mevcut olanların %98’si kategorik veri (en yaygın 5’li Likert)</li>
+<li>%93 tahminleyici bilgisi mevcut değil.</li>
+<li>Veri türü ve tahminleyici neden önemli? Li, 2016</li>
+</ul>
+<aside class="notes">
+<p>%69’u 5’li Likert sonra 3’lü Likert.</p>
+</aside>
+</section>
+<section id="s6-uyum" class="slide level2">
+<h2>S6-UYUM</h2>
+<ul>
+<li><p>RMSEA &lt;0.06, SRMR &lt;0.08, CFI, TLI(NNFI), NFI, GFI, AGFI için&gt;0.95 kesme değerleri iyi uyumu işaret ediyorsa, incelenen çalışmaların yaklaşık yarısının bu kriterleri sağlamakta zorlandığı görülmüştür.</p></li>
+<li><p>Veri-model uyumu neden önemli?</p></li>
+</ul>
+<aside class="notes">
+<p>Ki-karenin serbestlik derecesine oranı ise değerlendirmede dikkate alınmamıştır</p>
+</aside>
+</section>
+<section id="sonuç" class="slide level2">
+<h2>SONUÇ</h2>
+<ul>
+<li><p><em>İncelenen çalışmalarda raporlanan sonuçları tekrar edilebilmenin büyük oranda mümkün olmayacağı değerlendirilmiştir.</em></p></li>
+<li><p>Peki neden?</p>
+<ul>
+<li>Bulguların tekrarlanabilirliği (computational rep.)</li>
+<li>Sonuçların tekrarlanabilirliği (replicability)</li>
+</ul></li>
+</ul>
+<aside class="notes">
+<p>OSF benzeri Tubitak platformu</p>
+</aside>
+</section>
+<section id="tekrarlanabilir-faktör-analizi-sonuçlari" class="slide level2">
+<h2>TEKRARLANABİLİR FAKTÖR ANALİZİ SONUÇLARI</h2>
+<ul>
+<li>Muthen’in ölçek geliştirme basamakları</li>
+<li>Örneklem seçimi?</li>
+<li>Katılımcı motivasyonu?</li>
+<li>Örnek araçlar <a href="https://www.parinc.com/Products/PARiConnect" class="uri">https://www.parinc.com/Products/PARiConnect</a></li>
+<li>Şeffaflık</li>
+</ul>
+</section>
+<section id="teşekkürler" class="slide level2">
+<h2>TEŞEKKÜRLER</h2>
+<ul>
+<li>Sorular?</li>
+<li><a href="https://www.aydinburak.net" class="uri">https://www.aydinburak.net</a></li>
+<li>Sunum RStudio paketi revealjs Hattab ve Allaire (2017)</li>
+</ul>
+</section>
+    </div>
+  </div>
+
+  <script src="FAT2020sunum_files/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="FAT2020sunum_files/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display the page number of the current slide
+        slideNumber: true,
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: false,
+        // Opens links in an iframe preview overlay
+        previewLinks: true,
+        // Transition style
+        transition: 'convex', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+
+
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'FAT2020sunum_files/reveal.js-3.3.0.1/plugin/notes/notes.js', async: true },
+          { src: 'FAT2020sunum_files/reveal.js-3.3.0.1/plugin/search/search.js', async: true },
+          { src: 'FAT2020sunum_files/reveal.js-3.3.0.1/plugin/zoom-js/zoom.js', async: true },
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>
