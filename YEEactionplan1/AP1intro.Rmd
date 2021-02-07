@@ -65,11 +65,13 @@ author: DOÇ. DR. BURAK AYDIN
 ## Eylem Planı 1 Basamaklar ve TAKVİM
 
 - Bu videonun izlenmesi. $\color{darksalmon}{\text{12-18 Şubat}}$
-- 48 (24+24) performansın mevcut puanlama anahtarlarımızla *BİREYSEL* olarak puanlanması ve sonuçların gönderilen excel taslağına kaydedilip geri gönderilmesi $\color{darksalmon}{\text{25 Şubat}}$
-- Verilerin çözümlenmesi $\color{darksalmon}{\text{5 Mart}}$
-- Sekizer kişilik tartışma gruplarının oluşturulması $\color{darksalmon}{\text{8-14 Mart}}$
+- 48 (24+24) performansın mevcut puanlama anahtarlarımızla 8'i grup etkinliği ve 40'ı *BİREYSEL* olmak üzere puanlanması ve sonuçların gönderilen excel taslağına kaydedilip geri gönderilmesi $\color{darksalmon}{\text{25 Şubat}}$
+- Verilerin çözümlenmesi ve grafiklerin oluşturulması $\color{darksalmon}{\text{5 Mart}}$
+- Tartışma gruplarının oluşturulması $\color{darksalmon}{\text{8-14 Mart}}$
 - Raporun yazılması $\color{darksalmon}{\text{21 Mart}}$
 
 ## Kapanış
 
 - Birinci eylem planının nihai hedefi nedir?
+- Soru - yanıt
+- Teşekkürler
