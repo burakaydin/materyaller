@@ -1,0 +1,75 @@
+---
+title: "ALTE Eylem Planı 1"
+output: 
+  revealjs::revealjs_presentation:
+    theme: moon
+    self_contained: false
+    reveal_plugins: ["search", "zoom", "notes"]
+    transition: convex
+    reveal_options:
+      slideNumber: true
+      previewLinks: true
+author: DOÇ. DR. BURAK AYDIN
+
+---
+
+
+## SUNUM İÇERİĞİ
+
+- Neden bu etkinliği yapıyoruz?
+- Kısaca Eylem Planı 1: Konuşma performanslarının en az iki uzman tarafından puanlanması
+- ALTE puanlayıcılar ve puanlama atölye çalışmasının kısa içeriği
+- Yazılı ve sözlü performansların puanlanmasında dikkat edilmesi gerekenler
+- Eylem Planı 1: Basamaklar ve takvim
+
+
+## YEE - ALTE SÜRECİ
+
+- 17 Standart 
+- Kalite nişanı başvurusu - Nisan 2020
+- Denetçi raporu
+- ALTE yönetim kurulu kararı
+
+## Kısaca Eylem Planı 1
+
+- Puanlayıcılar ve puanlama - mevcut durum ve yapılacak yenilikler
+- Uygulama/farklılıkların tespiti
+- Grup tartışmaları
+- Raporlama
+
+
+## ALTE PUANLAYICILAR VE PUANLAMA EĞİTİMİ
+
+- Puanlayıcı özellikleri puanlamaya yansıyabilir.
+- Koordinasyon ve standardizasyon
+- İzleme (monitoring)
+- Neden puanlayıcılar arası farklılık ortadan kalkmıyor?
+- Analitik ve bütüncül puanlama anahtarları
+- Güvenirlik hesaplama yaklaşımları
+
+## Yazılı Sınavların Puanlanması
+
+- Güvercin ve şahin puanlayıcılar (tecrübe?)
+- Hale etkisi
+- Aktarma etkisi
+- Şişirilmiş/ezberlenmiş yanıtlar
+- Puanlayıcı yorgunluğu
+- Ölçme konusu olmayan özelliklere puan verilmesi
+
+## Sözlü Sınavların Puanlanması
+
+- Bir önceki yansıda yer alan maddeler
+- Puanlayıcı-birey arası etkileşim
+
+
+## Eylem Planı 1 Basamaklar ve TAKVİM
+
+- Bu videonun izlenmesi. $\color{darksalmon}{\text{12-18 Şubat}}$
+- 48 (24+24) performansın mevcut puanlama anahtarlarımızla *BİREYSEL* olarak puanlanması ve sonuçların gönderilen excel taslağına kaydedilip geri gönderilmesi $\color{darksalmon}{\text{25 Şubat}}$
+- Verilerin çözümlenmesi $\color{darksalmon}{\text{5 Mart}}$
+- Sekizer kişilik tartışma gruplarının oluşturulması $\color{darksalmon}{\text{8-14 Mart}}$
+- Raporun yazılması $\color{darksalmon}{\text{21 Mart}}$
+
+## Kapanış
+
+- Birinci eylem planının nihai hedefi nedir?
