@@ -17,8 +17,8 @@ author: DOÇ. DR. BURAK AYDIN
 ## SUNUM İÇERİĞİ
 
 - Neden bu etkinliği yapıyoruz?
-- Kısaca Eylem Planı 1: Konuşma performanslarının en az iki uzman tarafından puanlanması
-- ALTE puanlayıcılar ve puanlama atölye çalışmasının kısa içeriği
+- Kısaca Eylem Planı 1 
+- ALTE _puanlayıcılar ve puanlama_ atölye çalışmasının kısa içeriği
 - Yazılı ve sözlü performansların puanlanmasında dikkat edilmesi gerekenler
 - Eylem Planı 1: Basamaklar ve takvim
 
@@ -32,6 +32,7 @@ author: DOÇ. DR. BURAK AYDIN
 
 ## Kısaca Eylem Planı 1
 
+- Konuşma performanslarının en az iki uzman tarafından puanlanması
 - Puanlayıcılar ve puanlama - mevcut durum ve yapılacak yenilikler
 - Uygulama/farklılıkların tespiti
 - Grup tartışmaları
@@ -40,27 +41,64 @@ author: DOÇ. DR. BURAK AYDIN
 
 ## ALTE PUANLAYICILAR VE PUANLAMA EĞİTİMİ
 
+- Tüm gün yüz yüze
+- Grup tartışmaları ve sonrasında sınırlı içerik
+  
+  + Sizce puanlamayı etkileyen puanlayıcı özellikleri nelerdir?
+  + Puanlamada dikkat edilmesi gereken konular neler olabilir?
+  + Bütüncül ve analitik puanlama anahtarları arasındaki fark nedir?
+  + Basit puanlama tablolarıdaki puanlayıcı farkları
+
+  
+## ALTE PUANLAYICILAR VE PUANLAMA EĞİTİMİ- ÖRNEK ETKİNLİK 1
+
 - Puanlayıcı özellikleri puanlamaya yansıyabilir.
+ 
+  + [Link](https://www.menti.com/25nduu92oe) 
+
+  + www.menti.com adresinde  10 95 78 8 kodu
+
+  + <img src="mentiqr.png" width="300">
+
+- [Sonuçlar](https://www.mentimeter.com/s/28af741b3adeb25e6b541e0d44d3b207/995c5a5b93f5)
+
+
+## ALTE PUANLAYICILAR VE PUANLAMA EĞİTİMİ- ÖNEMLİ KONULAR
+
 - Koordinasyon ve standardizasyon
 - İzleme (monitoring)
-- Neden puanlayıcılar arası farklılık ortadan kalkmıyor?
 - Analitik ve bütüncül puanlama anahtarları
-- Güvenirlik hesaplama yaklaşımları
+- Güvenirlik hesaplama yaklaşımları: Mutlak uyum x Tutarlılık
+- Eğitimin özeti: Puanlayıcılar tartışmalı, fikir alışverişi yapmalıdır!
 
-## Yazılı Sınavların Puanlanması
+## Yazılı Sınavların Puanlanmasında DİKKAT EDİLMESİ GEREKENLER
 
 - Güvercin ve şahin puanlayıcılar (tecrübe?)
-- Hale etkisi
+- Hale etkisi/ yanlılık 
 - Aktarma etkisi
 - Şişirilmiş/ezberlenmiş yanıtlar
 - Puanlayıcı yorgunluğu
-- Ölçme konusu olmayan özelliklere puan verilmesi
+- Uç nokta/orta nokta eğilimi
+- Diğer: Ölçme konusu olmayan özelliklere puan verilmesi
 
 ## Sözlü Sınavların Puanlanması
 
 - Bir önceki yansıda yer alan maddeler
 - Puanlayıcı-birey arası etkileşim
+- Pusula/betik kullanma (script)
+- Slovenya örneği.
 
+## SİZCE NE KADAR YAYGIN?
+
+- Aynı bağlantı:
+ 
+  + [Link](https://www.menti.com/25nduu92oe) 
+
+  + www.menti.com adresinde  10 95 78 8 kodu
+
+  + <img src="mentiqr.png" width="300">
+
+- [Sonuçlar](https://www.mentimeter.com/s/28af741b3adeb25e6b541e0d44d3b207/995c5a5b93f5)
 
 ## Eylem Planı 1 Basamaklar ve TAKVİM
 
@@ -73,5 +111,5 @@ author: DOÇ. DR. BURAK AYDIN
 ## Kapanış
 
 - Birinci eylem planının nihai hedefi nedir?
-- Soru - yanıt
+- Soru - yanıt (menti 51 10 82)
 - Teşekkürler
